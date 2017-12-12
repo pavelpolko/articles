@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-navbar color="clmain">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Содержание</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content
+      pullingIcon="arrow-dropdown"
+      pullingText="Потяните для обновления"
+      refreshingSpinner="circles"
+      refreshingText="Обновление...">
+    </ion-refresher-content>
+  </ion-refresher>
+  
+  <div *ngIf="post_error == '0'">
+    <h3></h3>
+	  <div>
+	    <div class="post-category">{{post_category}}</div>
+	    <div class="post-dat">{{post_dat3}}</div>
+	  </div>
+	  <h3 class="post-title">{{post_title}}</h3>
+      <img *ngIf="post_is_photo != '1'" src="{{post_img}}" />
+	  <h5 class="post-intro-text">{{post_intro_text}}</h5>
+	  <div class="post-text" [innerHTML] = "post_full_text"></div>
+  
+    <button ion-item>
+      <ion-avatar item-left>
+        <img [src]="post_author_img" />
+      </ion-avatar>
+	  <ion-label class="author-title">{{post_author}}</ion-label>
+	</button>
+  </div>
+  <div *ngIf="post_error == '1'" style="text-align: center">
+    <ion-label>Ошибка при получении данных</ion-label>
+    <button ion-button (click)="loadData(0)" color="clmain" icon-left>
+	  <ion-icon name="refresh"></ion-icon>
+	  Обновить
+    </button>
+  </div>
+
+</ion-content>

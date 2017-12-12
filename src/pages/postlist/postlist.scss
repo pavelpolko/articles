@@ -1,0 +1,31 @@
+page-postlist {
+
+	.postlist-title {
+		font-size: 18px !important;
+		white-space: inherit;
+	}
+
+	.postlist-intro-text {
+		font-size: 14px !important;
+		color: gray;
+		white-space: inherit;
+	}
+
+	.postlist-dat {
+		font-size: 12px !important;
+		color: gray;
+		white-space: inherit;
+		float: right;
+		text-align: right;
+		width: 50%;
+	}
+
+	.postlist-category {
+		font-size: 12px !important;
+		color: gray;
+		white-space: inherit;
+		float: left;
+		width: 50%;
+	}
+
+}

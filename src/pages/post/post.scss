@@ -1,0 +1,35 @@
+page-post {
+
+	.post-title {
+		font-size: 19px !important;
+		white-space: inherit;
+	}
+
+	.post-intro-text {
+		font-size: 15px !important;
+		color: gray;
+		white-space: inherit;
+	}
+
+	.post-dat {
+		font-size: 14px !important;
+		color: gray;
+		white-space: inherit;
+		float: right;
+		text-align: right;
+		width: 50%;
+	}
+
+	.post-category {
+		font-size: 14px !important;
+		color: gray;
+		white-space: inherit;
+		float: left;
+		width: 50%;
+	}
+
+	.post-text {
+		font-size: 16px !important;
+	}
+
+}
